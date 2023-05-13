@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/police and lawyer.css' %}">
+
+    <title>Police and lawyer</title>
+</head>
+
+<body>
+
+    <!----slider section -->
+    <section class="slider-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 slider-content-wrap">
+                    <div class="slider-content">
+                        <h1>Defending </h1>
+                        <h3>LAW-ABIDING CITIZENS</h3>
+
+                        <a href="#" class="btn btn-primary"> Read More </a>
+                    </div>
+                    <div class="header-social">
+                        <ul class="d-flex">
+                            <li><span>Follow us</span></li>
+                            <li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                            <li><a href="#"> <i class="fab fa-facebook"></i> </a></li>
+                            <li><a href="#"> <i class="fab fa-youtube"></i> </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!----banner bottom-->
+    <div class="banner-bottom clear">
+        <div class="mid-content">
+            <div class="text-left left">
+                <h2>Police Academy</h2>
+                <p>Police Academy is a 1984 American comedy film directed by Hugh Wilson in his directorial debut, and
+                    distributed by Warner Bros. Pictures.[4] Its storyline follows a new recruitment policy for an
+                    unnamed city's police academy to take in any recruit who wishes to apply and study to become a
+                    police officer. The film stars Steve Guttenberg, Kim Cattrall, and G.W. Bailey.</p>
+            </div>
+            <div class="text-content-right right">
+                <img src="./image/4424.webp" alt="">
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!----team section -->
+
+    <div class="team-section">
+        <div class="mid-content">
+            <div class="section-title text-center">
+                <h2>Our team is constantly trying for you</h2>
+            </div>
+            <div class="team-members clear">
+
+                <div class="member left">
+                    <img src="https://i.ibb.co/pfTjv0F/face1.jpg" alt="">
+                    <div class="member-bio">
+                        <h4>Jason Doe</h4>
+
+                    </div>
+                </div>
+                <div class="member left">
+                    <img src="https://i.ibb.co/s659Rbf/face2.jpg" alt="">
+                    <div class="member-bio">
+                        <h4>Amanda Swon</h4>
+
+                    </div>
+                </div>
+                <div class="member left">
+                    <img src="https://i.ibb.co/dBZRkk6/face3.jpg" alt="">
+                    <div class="member-bio">
+                        <h4>Andrew Smith</h4>
+
+                    </div>
+                </div>
+                <div class="member left">
+                    <img src="https://i.ibb.co/Ky7bG1T/face4.jpg" alt="">
+                    <div class="member-bio">
+                        <h4>Jane Olsen</h4>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+{% endblock %}

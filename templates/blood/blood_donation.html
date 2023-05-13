@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Fonts -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/bloodonation.css' %}">
+
+<title>Blood Donation</title>
+<!----slider section -->
+<section class="slider-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 slider-content-wrap">
+                <div class="slider-content">
+                    <h1>Donate your blood by creating a post and save a life. </h1>
+                    <h3>After creating a post, receiver can call you. You can delete your post any time</h3>
+                    <h2>Click Donate Now....</h2>
+
+                    <a href="#" class="btn btn-primary"> Donate Now </a>
+                </div>
+                <div class="header-social">
+                    <ul class="d-flex">
+                        <li><span>Follow us</span></li>
+                        <li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                        <li><a href="#"> <i class="fab fa-facebook"></i> </a></li>
+                        <li><a href="#"> <i class="fab fa-youtube"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+<section class="portfolio-section">
+    <div class="container">
+        <div class="row">
+            <div class="col py-5 text-center">
+                <h1>Look at our application</h1>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-4 mb-4">
+                <div class="portfolio-item">
+                    <a href="#">
+                        <img src="{% static './image/young-man-making-blood-donation-hospital-focus-hand-young-man-making-blood-donation-hospital-166498077.jpg' %}"
+                            alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="portfolio-item">
+                    <a href="#">
+                        <img src="{% static './image/blood-donation.jpg' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="portfolio-item">
+                    <a href="#">
+                        <img src="{% static './image/1600x960_342835-covid-blood-donors1440.jpg' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="portfolio-item">
+                    <a href="#">
+                        <img src="{% static './image/150515124546-blood-donation-stock.jpg' %}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="portfolio-item">
+                    <a href="#">
+                        <img src="{% static './image/blood_donation.jpg'%}" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="portfolio-item">
+                    <a href="#">
+                        <img src="{% static './image/blood-donation-to-nhsbt-2021-min.jpg' %}" alt="">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

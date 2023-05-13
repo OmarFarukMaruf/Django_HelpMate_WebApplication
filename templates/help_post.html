@@ -1,0 +1,130 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .post-widget {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .post-widget .profile {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .post-widget .profile img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    .post-widget .name-address {
+      display: flex;
+      flex-direction: column;
+      font-size: medium;
+      color: #888;
+    }
+
+    .post-widget .post-content {
+      margin-bottom: 10px;
+      font-size: large;
+      line-height: 1;
+    }
+
+    .post-widget .post-image img {
+      width: 100%;
+      max-height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .post-widget .post-date {
+      margin-left: auto;
+      font-size: 14px;
+      color: black;
+    }
+
+    p {
+      text-shadow: 3px 2px 5px gray;
+      text-align: center;
+      font-size: 30px;
+      font-weight: 800;
+
+    }
+
+    body .btn-primary {
+      background-color: #e73a3e !important;
+      border-color: #e73a3e;
+      padding: 10px 40px;
+      font-size: 16px;
+
+      position: relative;
+      z-index: 1;
+    }
+
+    body .btn-primary:hover {
+      border-color: #111;
+    }
+
+    body .btn-primary::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 0;
+      height: 100%;
+      background-color: #111;
+      border-color: #111;
+
+      z-index: -1;
+      transition: .3s;
+    }
+
+    body .btn-primary:hover::after {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <center><a href="{% url 'post' %}" class="btn btn-primary">Ask for Help
+    </a></center><br>
+
+  {% for posts in help_post %}
+  <div class="post-widget">
+    <div class="profile">
+      <!--- <img src="[Profile Picture URL]" alt="Profile Picture"> --->
+      <div class="name-address">
+        <span class="name">Name: {{ posts.name}}</span>
+        <span class="address">Address: {{ posts.address }}</span>
+      </div>
+    </div>
+    <div class="post-content">
+      {{ posts.post }}
+    </div>
+    <div class="post-image">
+      <img src="[Post Image URL]" alt="Post Image">
+    </div>
+    <div class="post-date">
+      {{ posts.post_time }}
+    </div>
+  </div>
+  {% endfor %}
+</body>
+
+</html>
+
+
+
+{% endblock %}

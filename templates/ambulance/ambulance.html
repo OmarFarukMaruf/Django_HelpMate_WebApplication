@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ambulance</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/ambulance.css' %}">
+
+    <!----slider section -->
+    <section class="slider-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6 slider-content-wrap">
+                    <div class="slider-content">
+                        <h6>Your Health is Our Priority </h6>
+                        <h1>Emergency Medical Services</h1>
+
+                        <a href="{% url 'ambulance_number' %}" class="btn btn-primary"> Call Now </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!---about---->
+
+    <section class="about-seciton py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-image">
+                        <img src="{% static './image/about-style1__image-1.jpg' %}" alt="">
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-text">
+                        <div class="finix-text">
+                            <h3> Our Introductions </h3>
+                            <h2>A Leading Medical Service Provider</h2>
+                            <p>Integer aliquam odio tortor dolor sit am adipi we help you ensure everyone is in the
+                                right jobs sicing elit, sed do consulting firms Et leggings across the nation tempor.
+                            </p>
+
+                            <ul>
+                                <li>Help us Save a Life</li>
+                                <li>Join our Big Family</li>
+
+                            </ul>
+                            <a href="#" class="btn btn-primary">Discover About More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </body>
+
+</html>
+{% endblock %}

@@ -1,0 +1,54 @@
+<!---header section-->
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light main-header sticky-top">
+    <div class="container-fluid">
+
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <h1>HelpMate</h1>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <ul class="navbar-nav ml-auto our-primary-menu">
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Pages <i class="fas fa-chevron-down"></i> </a>
+                    <ul>
+                        <li><a href="#">Ambulance</a></li>
+                        <li><a href="#">Call police</a></li>
+                        <li><a href="{% url 'blood' %}">Blood</a></li>
+                        <li><a href="{% url 'fireservice' %}">Fire Service</a></li>
+                        <li><a href="#">Medicine</a></li>
+
+                    </ul>
+                </li>
+                <li><a href="#">Help Post</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <div class="header-info d-flex align-items-center">
+                <div class="header-search">
+                    <span> <i class="fas fa-search"></i> </span>
+                </div>
+                <div class="header-call clearfix">
+                    <div class="header-call-icon float-left mr-3 h-100">
+                        <span> <i class="fas fa-phone-volume"></i> </span>
+                    </div>
+                    <div class="header-call-info">
+                        <span class="d-block">Call Now</span>
+                        <a class="d-block" href="tel:999">999</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>

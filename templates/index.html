@@ -1,0 +1,135 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content%}
+
+<!---slider-->
+
+<div class="banner-section">
+    <div class="mid-content">
+        <div class="banner-content text-center">
+            <h2>HelpMate</h2>
+
+        </div>
+    </div>
+</div>
+
+
+<!--feature item-->>
+
+<section class="feature-section py-5">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-lg-4 mb-4">
+                <div class="feature-item d-flex align-items-center">
+                    <div class="left-img-sec h-100">
+                        <a href="{% url 'blood' %}"><img src="{% static 'image/World-Blood-Donor-Day.jpg' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="left-test-sec h-auto">
+                        <a href="{% url 'blood' %}">
+                            <h4>Blood Donation</h4>
+                        </a>
+                        <p>Donate your Blood and receive if you need</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="feature-item d-flex align-items-center">
+                    <div class="left-img-sec h-100">
+                        <a href="{% url 'ambulance' %}"><img src="{% static './image/WH1126_DP_A.png' %}" alt=""></a>
+
+                    </div>
+                    <div class="left-test-sec h-auto">
+                        <a href="{% url 'ambulance' %}">
+                            <h4>Call Ambulance</h4>
+                        </a>
+
+                        <p>Find your nearest Ambulance</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="feature-item d-flex align-items-center">
+                    <div class="left-img-sec h-100">
+                        <a href="{% url 'fireservice' %}"><img src="{% static './image/1618372262_pjimage-85.avif' %}"
+                                alt=""></a>
+                    </div>
+                    <div class="left-test-sec h-auto">
+                        <a href="{% url 'fireservice' %}">
+                            <h4>Fire Service</h4>
+                        </a>
+                        <p>Some content goes here </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="feature-item d-flex align-items-center">
+                    <div class="left-img-sec h-100">
+                        <a href="{% url 'medicine' %}"><img
+                                src="{% static './image/360_F_281427785_gfahY8bX4VYCGo6jlfO8St38wS9cJQop.jpg' %}"
+                                alt=""></a>
+
+                    </div>
+                    <div class="left-test-sec h-auto">
+                        <a href="{% url 'medicine' %}">
+                            <h4>Medicine</h4>
+                        </a>
+
+                        <p>Activities that get your heart pumping harder have tremendous health benefits for your
+                            heart and mind.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="feature-item d-flex align-items-center">
+                    <div class="left-img-sec h-100">
+                        <a href="{% url 'police' %}"><img src="{% static './image/lawyer.jpg' %}" alt=""></a>
+
+                    </div>
+                    <div class="left-test-sec h-auto">
+                        <a href="{% url 'police' %}">
+                            <h4>Police and Lawyer</h4>
+                        </a>
+
+                        <p>Activities that get your heart pumping harder have tremendous health benefits for your
+                            heart and mind.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="feature-item d-flex align-items-center">
+                    <div class="left-img-sec h-100">
+                        <a href="{% url 'help_post' %}"><img
+                                src="{% static './image/help-others-yellow-post-help-others-150991106.jpg' %}"
+                                alt=""></a>
+
+                    </div>
+                    <div class="left-test-sec h-auto">
+                        <a href="{% url 'help_post' %}">
+                            <h4>Help Post</h4>
+                        </a>
+                        <p>Activities that get your heart pumping harder have tremendous health benefits for your
+                            heart and mind.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+
+
+
+
+
+<!---footer-->

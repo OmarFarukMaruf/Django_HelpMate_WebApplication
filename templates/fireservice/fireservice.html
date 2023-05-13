@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Fonts -->
+<link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400;1,500&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap"
+    rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/fireservice.css'%}">
+
+<title>Fire Service</title>
+
+<!----slider section -->
+<section class="slider-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-6 slider-content-wrap">
+                <div class="slider-content">
+                    <h1> We're here to save lives and Properties </h1>
+                    <h6>We save people, animals and place each and everyday and we are looking to give better service in
+                        future too. </h6>
+                    <a href="{% url 'fireservice_call' %}" class="btn btn-primary"> Call Now </a>
+                </div>
+                <div class="header-social">
+                    <ul class="d-flex">
+                        <li><span>Follow us</span></li>
+                        <li><a href="#"> <i class="fab fa-twitter"></i> </a></li>
+                        <li><a href="#"> <i class="fab fa-facebook"></i> </a></li>
+                        <li><a href="#"> <i class="fab fa-youtube"></i> </a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!------->
+
+<section class="about-seciton py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-image">
+                    <img src="{% static './image/istockphoto-869570658-612x612.jpg' %}" alt="">
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-text">
+                    <div class="finix-text">
+                        <p>
+                            Calling the fire service in time is crucial. Promptly alerting firefighters at
+                            the first sign of a fire can save lives and prevent extensive property damage.
+                            Fires can rapidly escalate, surpassing our ability to contain them alone.
+                            Firefighters are trained to handle such emergencies, equipped with specialized
+                            gear and strategies. Timely calls enable them to respond swiftly, preventing
+                            the fire from spreading and endangering neighboring structures. Firefighters
+                            can assess the situation, determine necessary resources, and execute effective
+                            firefighting strategies. Their expertise minimizes risks and maximizes the chances of
+                            success.
+                            Don't hesitate to call the fire service—every second counts in combating fires.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
