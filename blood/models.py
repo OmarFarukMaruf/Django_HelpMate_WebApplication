@@ -4,24 +4,24 @@ from accounts.models import CustomUser
 # Create your models here.
 
 DISTRICT_CHOISE = [
-    ("1", "DHAKA"),
-    ("2", "CHITTAGONG"),
-    ("3", "KHULNA"),
-    ("4", "RAJSHAHI"),
-    ("5", "BARISHAL"),
-    ("6", "DINAJPUR"),
-    ("7", "RANGPUR")
+    ("Dhaka", "DHAKA"),
+    ("Chittagong", "CHITTAGONG"),
+    ("Khulna", "KHULNA"),
+    ("Rajshahi", "RAJSHAHI"),
+    ("Barishal", "BARISHAL"),
+    ("Dinajpur", "DINAJPUR"),
+    ("Rangpur", "RANGPUR")
 ]
 
 BLOOD_GROUP = [
-    ("1", "A+"),
-    ("2", "A-"),
-    ("3", "B+"),
-    ("4", "B-"),
-    ("5", "AB+"),
-    ("6", "AB-"),
-    ("7", "O+"),
-    ("8", "O-")
+    ("A+", "A+"),
+    ("A-", "A-"),
+    ("B+", "B+"),
+    ("B-", "B-"),
+    ("AB+", "AB+"),
+    ("AB-", "AB-"),
+    ("O+", "O+"),
+    ("O-", "O-")
 ]
 
 
@@ -30,11 +30,11 @@ class BloodModel(models.Model):
     district = models.CharField(
         choices=DISTRICT_CHOISE, max_length=50, default=None)
     city = models.CharField(max_length=50, default=None)
-    area = models.CharField(max_length=100, default = None)
-    blood_group = models.CharField(BLOOD_GROUP , max_length=50)
+    area = models.CharField(max_length=100, default=None)
+    blood_group = models.CharField(choices=BLOOD_GROUP, max_length=50)
     post_time = models.DateTimeField(auto_now=True)
     phone_number = models.CharField(max_length=50, default=None)
-    comment = models.TextField(default = None)
+    comment = models.TextField(blank=True)
 
 
 def __str__(self):

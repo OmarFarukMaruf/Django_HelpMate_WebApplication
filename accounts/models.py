@@ -2,10 +2,10 @@ from django.contrib.auth.models import AbstractUser, BaseUserManager
 from django.db import models
 
 
+
 class CustomUserManager(BaseUserManager):
     use_in_migration = True
-
-    def create_user(self, email, first_name, last_name, username, password=None, **extra_fields):
+    def create_user(self, email, first_name, last_name, username ,password=None, **extra_fields):
         if not first_name:
             raise ValueError('Users must have a first name')
         if not last_name:
@@ -31,6 +31,12 @@ class CustomUserManager(BaseUserManager):
             raise ValueError("Is staff")
         return self.create_user(email, first_name, last_name, username, password, **extra_fields)
 
+GENDER = [
+    ("male", "Male"),
+    ("female", "Female"),
+    ("transgenic", "Transgenic"),
+    ("other", "Other")
+]
 
 class CustomUser(AbstractUser):
     email = models.EmailField(max_length=100, unique=True)
@@ -38,6 +44,8 @@ class CustomUser(AbstractUser):
     last_name = models.CharField(max_length=30)
     username = models.CharField(max_length=30)
     phone = models.CharField(max_length=50)
+    gender = models.CharField(max_length=20)
+    date_of_birth = models.DateField(null = True)
     is_active = models.BooleanField(default=False)
 
     # other fields you want to add

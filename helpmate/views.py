@@ -15,3 +15,9 @@ def medicine(request):
 
 def police(request):
     return render(request, 'police.html')
+
+def login(request):
+    return render(request, 'singin.html')
+
+def register(request):
+    return render(request, 'register.html')

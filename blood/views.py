@@ -1,10 +1,15 @@
 from django.shortcuts import render
 from .form import BloodForm
+from .models import BloodModel
 
 # Create your views here.
 
 def blood(request):
-    return render(request, 'blood/blood_donation.html')
+    blood_post = BloodModel.objects.all()
+    context = {
+        'blood_post' : blood_post
+    }
+    return render(request, 'blood/blood_donation.html', context)
 
 def blood_post(request):
     if request.method == 'POST':

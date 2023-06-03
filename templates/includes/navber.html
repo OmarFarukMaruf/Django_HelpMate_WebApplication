@@ -19,16 +19,15 @@
                 <li><a href="#">About</a></li>
                 <li><a href="#">Pages <i class="fas fa-chevron-down"></i> </a>
                     <ul>
-                        <li><a href="#">Ambulance</a></li>
-                        <li><a href="#">Call police</a></li>
+                        <li><a href="{% url 'ambulance' %}">Ambulance</a></li>
+                        <li><a href="{% url 'police' %}">Call police</a></li>
                         <li><a href="{% url 'blood' %}">Blood</a></li>
                         <li><a href="{% url 'fireservice' %}">Fire Service</a></li>
-                        <li><a href="#">Medicine</a></li>
+                        <li><a href="{% url 'medicine' %}">Medicine</a></li>
 
                     </ul>
                 </li>
-                <li><a href="#">Help Post</a></li>
-                <li><a href="#">Services</a></li>
+                <li><a href="{% url 'help_post' %}">Help Post</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
 
@@ -37,12 +36,10 @@
                     <span> <i class="fas fa-search"></i> </span>
                 </div>
                 <div class="header-call clearfix">
-                    <div class="header-call-icon float-left mr-3 h-100">
-                        <span> <i class="fas fa-phone-volume"></i> </span>
-                    </div>
-                    <div class="header-call-info">
-                        <span class="d-block">Call Now</span>
-                        <a class="d-block" href="tel:999">999</a>
+
+                    <div>
+                        <a href="#">Sign in</a> <span class="dark-transp"> | </span>
+                        <a href="{% url 'register' %}"> Register</a>
                     </div>
                 </div>
 

@@ -144,7 +144,7 @@ ul.our-primary-menu li ul li a {}
     font-size: 18px;
 }
 
-.header-button {}
+
 
 
 
@@ -170,6 +170,14 @@ ul.our-primary-menu li ul li a {}
     z-index: -1;
 }
 
+.slider-section h3 {
+    color: green;
+}
+
+.slider-section h2 {
+    color: white;
+}
+
 .slider-content-wrap {
     height: 90vh;
     display: flex;
@@ -186,6 +194,12 @@ ul.our-primary-menu li ul li a {}
     margin-top: 25px;
     margin-bottom: 20px;
     color: #f9fafb;
+}
+
+table {
+    border: 1px solid brown;
+    font-weight: bold;
+
 }
 
 

@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .form import HelpForm
 from .models import HelpPost
 
@@ -15,7 +15,8 @@ def post(request):
     if request.method == 'POST':
         form = HelpForm(request.POST)
         if form.is_valid():
-            form.save()  # Save the form data to the database
+            form.save()# Save the form data to the database
+        return redirect('help_post')
     else:
         form = HelpForm()
 

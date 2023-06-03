@@ -12,18 +12,17 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='HelpPost',
+            name='BloodModel',
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(default=None, max_length=50)),
-                ('district', models.CharField(choices=[('1', 'DHAKA'), ('2', 'CHITTAGONG'), ('3', 'KHULNA'), ('4', 'RAJSHAHI'), ('5', 'BARISHAL'), ('6', 'DINAJPUR'), ('7', 'RANGPUR')], default=None, max_length=50)),
+                ('district', models.CharField(choices=[('Dhaka', 'DHAKA'), ('Chittagong', 'CHITTAGONG'), ('Khulna', 'KHULNA'), ('Rajshahi', 'RAJSHAHI'), ('Barishal', 'BARISHAL'), ('Dinajpur', 'DINAJPUR'), ('Rangpur', 'RANGPUR')], default=None, max_length=50)),
                 ('city', models.CharField(default=None, max_length=50)),
-                ('address', models.CharField(default=None, max_length=100)),
-                ('post', models.TextField()),
+                ('area', models.CharField(default=None, max_length=100)),
+                ('blood_group', models.CharField(choices=[('A+', 'A+'), ('A-', 'A-'), ('B+', 'B+'), ('B-', 'B-'), ('AB+', 'AB+'), ('AB-', 'AB-'), ('O+', 'O+'), ('O-', 'O-')], max_length=50)),
                 ('post_time', models.DateTimeField(auto_now=True)),
                 ('phone_number', models.CharField(default=None, max_length=50)),
-                ('image', models.ImageField(default='', upload_to='photos/post_help')),
-                ('emergency', models.BooleanField(default=False)),
+                ('comment', models.TextField(blank=True)),
             ],
         ),
     ]

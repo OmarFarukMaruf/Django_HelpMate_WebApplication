@@ -1,0 +1,72 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+</head>
+
+<body>
+    <center>
+        <div class="form_container">
+            <h1 class="form-title">Registration Form</h1>
+            <form action="{% url 'register' %}" method="POST">
+                {% csrf_token %}
+                <div class="user-form">
+
+                    <div>
+                        <label> First Name
+                        </label><br>
+                        {{ form.first_name }}
+                    </div>
+
+
+                    <div>
+                        <label> Last Name
+                        </label> <br>
+                        {{ form.last_name }}
+                    </div>
+
+
+                    <div>
+                        <label for='email'> Email
+                        </label><br>
+                        {{ form.email }}
+                    </div>
+                    <div>
+                        <label for='email'> Email
+                        </label><br>
+                        {{ form.phone }}
+                    </div>
+                    <div>
+                        <label for="password">Password:</label><br>
+                        {{ form.password }}
+                    </div>
+                    <div>
+                        <label for="confirm_password">Confirm Password:</label><br>
+                        {{ form.confirm_password }}
+                    </div>
+                    <div class="submit-btn">
+                        <button type="submit" class="btn btn-primary btn-block"> Register </button>
+                    </div>
+                </div>
+                <div style="color:aliceblue">
+                    {{ form.email.errors }}
+                    {{ form.non_field_errors}}
+                </div>
+
+            </form>
+        </div>
+    </center>
+
+</body>
+
+</html>
+{% endblock %}

@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
     integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 <link rel="stylesheet" href="{% static 'css/bloodonation.css' %}">
+<link rel="stylesheet" href="{% static 'css/post.css' %}">
 
 <title>Blood Donation</title>
 <!----slider section -->
@@ -25,10 +26,11 @@
             <div class="col-lg-6 slider-content-wrap">
                 <div class="slider-content">
                     <h1>Donate your blood by creating a post and save a life. </h1>
-                    <h3>After creating a post, receiver can call you. You can delete your post any time</h3>
-                    <h2>Click Donate Now....</h2>
+                    <h3 style="color:aquamarine">After creating a post, receiver can call you. You can delete your post
+                        any time</h3>
+                    <h2 style="color: bisque;">Click Donate Now....</h2>
 
-                    <a href="#" class="btn btn-primary"> Donate Now </a>
+                    <a href="{% url 'massage' %}" class="btn btn-primary"> Donate Now </a>
                 </div>
                 <div class="header-social">
                     <ul class="d-flex">
@@ -45,7 +47,34 @@
 
 
 
-
+<section class="post">
+    <center>
+        <div class="post_title">
+            <h3 style="padding: 20px; color:brown; background-color:aquamarine">Blood Requests</h3>
+        </div>
+    </center>
+    {% for posts in blood_post %}
+    <div class="post-widget">
+        <div class="profile">
+            <!--- <img src="[Profile Picture URL]" alt="Profile Picture"> --->
+            <div class="name-address">
+                <span class="name">Name: {{ posts.name}}</span>
+                <span class="address">Address: {{ posts.area }}, City: {{posts.city}}, {{posts.district}}</span>
+                <span class="address">Phone: {{ posts.phone_number }}</span>
+            </div>
+        </div>
+        <div class="post-content"> Needed blood group :
+            {{ posts.blood_group }}
+        </div>
+        <div class="post-comment">
+            <p> {{ posts.comment }}</p>
+        </div>
+        <div class="post-date">
+            {{ posts.post_time }}
+        </div>
+    </div>
+    {% endfor %}
+</section>
 
 
 

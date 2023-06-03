@@ -23,6 +23,7 @@ class HelpPost(models.Model):
     post = models.TextField()
     post_time = models.DateTimeField(auto_now=True)
     phone_number = models.CharField(max_length=50, default=None)
+    image = models.ImageField(upload_to= 'photos/post_help', default = "")
     emergency = models.BooleanField(default=False)
 
 
