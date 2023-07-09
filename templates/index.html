@@ -5,17 +5,66 @@
 
 <!---slider-->
 
-<div class="banner-section">
+{% comment %} <div class="banner-section">
     <div class="mid-content">
         <div class="banner-content text-center">
             <h2>HelpMate</h2>
 
         </div>
     </div>
-</div>
+</div> {% endcomment %}
+<section class="carousel-class">
+    <div id="carouselExampleControls" class="carousel slide panda-slide" data-bs-ride="carousel">
+        <div style="background-color: antiquewhite;" class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row d-flex align-items-center p-5">
+              <div class="col-md-7">
+                <h1>AMBULANCE SERVICE</h1>
+                <h5>We are here to provide emergency medical assistance to those in need. Whether you have a medical emergency or need non-emergency transport, we have you covered. Our team of highly trained medical professionals and dedicated support staff is ready to assist you 24/7. Here's everything you need to know about our services:</h5>
+                <button type="button" class="btn btn-danger">View Details</button>
+              </div>
+              <div class="col-md-5">
+                <img src="https://img.freepik.com/free-vector/ambulance_53876-59952.jpg?w=740&t=st=1688918440~exp=1688919040~hmac=df0de26936f6365b3b14ff8dde7ff09087d0726c1387faa7036fa4eb21c8a9de" class="d-block img-fluid" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row d-flex align-items-center p-5">
+              <div class="col-md-7">
+                <h1>BLOOD DONATION</h1>
+                <h5>Blood donation is a valuable service that can make a difference in the lives of patients in need. If you are eligible and willing to donate, your contribution can have a positive impact on the community.</h5>
+                <button type="button" class="btn btn-danger">View Details</button>
+              </div>
+              <div class="col-md-5">
+                <img src="https://img.freepik.com/free-vector/happy-world-blood-donor-day-red-white-black-background-social-media-design-banner-free-vector_1340-21622.jpg?size=626&ext=jpg&uid=R49546998&ga=GA1.2.1286307662.1647967454&semt=ais" class="d-block img-fluid" alt="...">
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row d-flex align-items-center p-5">
+              <div class="col-md-7">
+                <h1>FIRE SERVICE</h1>
+                <h5>It's important to note that the specifics of the fire service can vary depending on the country, region, and local regulations. For detailed information about fire departments and fire service in your specific area, it's recommended to visit the official website of your local fire department or fire service agency.</h5>
+                <button type="button" class="btn btn-danger">View Details</button>
+              </div>
+              <div class="col-md-5">
+                <img src="https://img.freepik.com/free-vector/simple-drawing-fireman-holding-hose_1308-82741.jpg?w=740&t=st=1688918267~exp=1688918867~hmac=d78cc5da4097ad7001e375046770a640a25b5a92cb4758a6b2a1b58623a6b157" class="d-block img-fluid" alt="...">
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
+</section>
 
-
-<!--feature item-->>
+<!--feature item-->
 
 <section class="feature-section py-5">
     <div class="container">
@@ -123,6 +172,10 @@
 
         </div>
     </div>
+    
+</section>
+<section class='mt-20'>
+    <button type="button" class="btn btn-danger">Danger</button>
 </section>
 
 {% endblock %}
